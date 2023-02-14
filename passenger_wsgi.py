@@ -37,6 +37,22 @@ PYTHON_VERSION = '3.10'
 
 
 if __name__ == "__main__":
+
+    path_current_program = os.path.join(
+        pathlib.Path(__file__).parent
+    )
+
+    path_current_venv = os.path.join(
+        pathlib.Path(__file__).parent,
+        'venv',
+        'lib',
+        'python' + PYTHON_VERSION,
+        'site-packages'
+    )
+
+    print(path_current_program)
+    print(path_current_venv)
+
     # Устанавливаю рабочую директорию в корень программы.
     # I install the working directory in the root of the program.
     sys.path.insert(
@@ -49,10 +65,6 @@ if __name__ == "__main__":
             pathlib.Path(__file__).parent
         )) + "/"
     )
-    #
-    # print(str(os.path.join(
-    #         pathlib.Path(__file__).parent
-    #     )))
 
     # Устанавливаю директорию виртуального окружения Python.
     # I'm installing the Python virtual environment directory.
@@ -82,4 +94,3 @@ if __name__ == "__main__":
     # Стартуем проект.
     # Starting the project.
     application = get_wsgi_application()
-
