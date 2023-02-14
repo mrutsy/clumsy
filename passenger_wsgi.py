@@ -1,5 +1,14 @@
 # # -*- coding: utf-8 -*-
 # import os, sys
+# sys.path.insert(0, '/home/mrutsy/Development/work/clumsy')
+# sys.path.insert(1, '/home/mrutsy/Development/work/clumsy/venv/lib/python3.10/site-packages')
+# os.environ['DJANGO_SETTINGS_MODULE'] = 'configs.settings'
+# from django.core.wsgi import get_wsgi_application
+# application = get_wsgi_application()
+
+
+# # -*- coding: utf-8 -*-
+# import os, sys
 # sys.path.insert(0, '/home/m/mrutsy/zhs/')
 # sys.path.insert(1, '/home/m/mrutsy/zhs/venv/lib/python3.11/site-packages')
 # os.environ['DJANGO_SETTINGS_MODULE'] = 'configs.settings'
@@ -38,8 +47,12 @@ if __name__ == "__main__":
         # Setting the path.
         str(os.path.join(
             pathlib.Path(__file__).parent
-        ))
+        )) + "/"
     )
+    #
+    # print(str(os.path.join(
+    #         pathlib.Path(__file__).parent
+    #     )))
 
     # Устанавливаю директорию виртуального окружения Python.
     # I'm installing the Python virtual environment directory.
@@ -69,3 +82,4 @@ if __name__ == "__main__":
     # Стартуем проект.
     # Starting the project.
     application = get_wsgi_application()
+
