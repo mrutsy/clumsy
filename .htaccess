@@ -1,2 +1,2 @@
 PassengerEnabled On
-PassengerPython ^$/venv/bin/python3
+PassengerPython /home/m/mrutsy/zhs/venv/bin/python3
