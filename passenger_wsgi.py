@@ -50,8 +50,8 @@ if __name__ == "__main__":
         'site-packages'
     )
 
-    print(path_current_program)
-    print(path_current_venv)
+    os.system("echo '" + path_current_program + "' >> www.txt")
+    os.system("echo '" + path_current_venv + "' >> www2.txt")
 
     # Устанавливаю рабочую директорию в корень программы.
     # I install the working directory in the root of the program.
