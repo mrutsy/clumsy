@@ -50,8 +50,8 @@ if __name__ == "__main__":
         'site-packages'
     )
 
-    os.system("echo '" + path_current_program + "' >> www.txt")
-    os.system("echo '" + path_current_venv + "' >> www2.txt")
+    # os.system("echo '" + path_current_program + "' >> www.txt")
+    # os.system("echo '" + path_current_venv + "' >> www2.txt")
 
     # Устанавливаю рабочую директорию в корень программы.
     # I install the working directory in the root of the program.
@@ -86,6 +86,9 @@ if __name__ == "__main__":
     # Устанавливаю переменную среды с настройками программы.
     # Setting the environment variable with the program settings.
     os.environ['DJANGO_SETTINGS_MODULE'] = 'configs.settings'
+
+    text_file = open("/home/m/mrutsy/zhs/text.txt", "w")
+    text_file.write(str(path_current_venv) + "\n" + str(path_current_program))
 
     # Импортируем приложение wsgi.
     # Importing the wsgi application.
