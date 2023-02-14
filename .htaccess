@@ -1,2 +1,2 @@
 PassengerEnabled On
-PassengerPython /usr/bin/python3
+PassengerPython %{DOCUMENT_ROOT}/venv/bin/python3.10
